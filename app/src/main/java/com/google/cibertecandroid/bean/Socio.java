@@ -1,9 +1,11 @@
 package com.google.cibertecandroid.bean;
 
+import java.io.Serializable;
+
 /**
  * Created by RUBITO on 24/06/2016.
  */
-public class Socio {
+public class Socio implements Serializable {
 
     private int idSocio;
     private String nombres;

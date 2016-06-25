@@ -11,7 +11,7 @@ import android.widget.Spinner;
 
 import com.google.cibertecandroid.bean.Socio;
 import com.google.cibertecandroid.dao.SociosSQLiteHelper;
-import com.google.cibertecandroid.util.Mensajes;
+import com.google.cibertecandroid.util.Metodos;
 
 public class RegistroDeSocio extends AppCompatActivity implements View.OnClickListener {
     Button buttonRegistrarSocio;
@@ -63,7 +63,7 @@ public class RegistroDeSocio extends AppCompatActivity implements View.OnClickLi
 
                 SociosSQLiteHelper sociosSQLiteHelper = new SociosSQLiteHelper(this);
                 sociosSQLiteHelper.insertaSocio(socio);
-                Mensajes.mensaje("Socio Registrado Correctamente", this);
+                Metodos.mensaje("Socio Registrado Correctamente", this);
 
                 intent = new Intent(this, Login.class);
                 startActivity(intent);

@@ -194,4 +194,31 @@ public class SociosSQLiteHelper extends SQLiteOpenHelper {
         sqLiteDatabase.close();
         return cuotaArrayList;
     }
+
+    public ArrayList<Cuota> listaCuotaSocio(int idSocio) {
+        ArrayList<Cuota> cuotaArrayList = new ArrayList<>();
+        Cuota cuota = null;
+        SQLiteDatabase sqLiteDatabase = getWritableDatabase();
+        String tabla = "cuota";
+        String[] columnas = {"idCuota", "idSocio", "idObligacion", "montoCuota", "fechaPagoCuota", "estadoCuota"};
+
+        String where = "idSocio = ?";
+        String[] valuesWhere = {String.valueOf(idSocio)};
+        Cursor cursor = sqLiteDatabase.query(tabla, columnas, where, valuesWhere, null, null, null);
+
+        if (cursor.moveToFirst()) {
+            do {
+                cuota = new Cuota();
+                cuota.setIdCuota(cursor.getInt(0));
+                cuota.setIdSocio(cursor.getInt(1));
+                cuota.setIdObligacion(cursor.getInt(2));
+                cuota.setMontoCuota(cursor.getDouble(3));
+                cuota.setFechaPagoCuota(cursor.getString(4));
+                cuota.setEstadoCuota(cursor.getString(5));
+                cuotaArrayList.add(cuota);
+            } while (cursor.moveToNext());
+        }
+        sqLiteDatabase.close();
+        return cuotaArrayList;
+    }
 }

@@ -15,7 +15,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegistroDeSocio"></activity>
+        <activity android:name=".RegistroDeSocio" />
+        <activity android:name=".Cuotas" />
+        <activity android:name=".ObligacionPago" />
     </application>
 
 </manifest>

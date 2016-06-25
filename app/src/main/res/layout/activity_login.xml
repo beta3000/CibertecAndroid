@@ -7,68 +7,68 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.google.cibertecandroid.MainActivity">
+    tools:context="com.google.cibertecandroid.Login">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:weightSum="1"
-        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="1">
 
         <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="LOGIN"
-            android:id="@+id/textView"
-            android:gravity="center"
             android:layout_weight="0.13"
+            android:gravity="center"
+            android:text="LOGIN"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="38dp" />
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="E-MAIL"
-            android:id="@+id/textView2" />
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
+            android:id="@+id/editTextEmailLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/editTextEmail" />
+            android:inputType="textEmailAddress" />
 
         <TextView
+            android:id="@+id/textView3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="PASSWORD"
-            android:id="@+id/textView3" />
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
         <EditText
+            android:id="@+id/editTextPasswordLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
             android:ems="10"
-            android:id="@+id/editTextPassword" />
+            android:inputType="textPassword" />
 
         <Button
 
+            android:id="@+id/buttonIngresar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ingresar"
-            android:id="@+id/buttonIngresar" />
+            android:text="Ingresar" />
 
         <Button
 
+            android:id="@+id/buttonRegistrar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Registrar"
-            android:id="@+id/buttonRegistrar" />
+            android:text="Registrar" />
 
     </LinearLayout>
 
